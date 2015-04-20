@@ -327,6 +327,8 @@ us_states.STATES_NORMALIZED = {
 }
 
 if window?
-  window.us_states = us_states
+  window.validoc.fields.local ?= {}
+  window.validoc.fields.local.en ?= {}
+  window.validoc.fields.local.en.us_states = us_states
 else if exports?
   module.exports = us_states
